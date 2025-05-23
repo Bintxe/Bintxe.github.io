@@ -1,0 +1,67 @@
+
+.main-box{
+    background-color: black;    
+}
+
+footer{
+    background-color: black;    
+}
+
+.footer-box{
+    background-color: black;    
+}
+
+.menu-mobile-row-c{
+    display: flex;
+    padding: 0.5vh 1.5vh;
+    align-items: center;
+    background-color: var(--web-beige);
+}
+
+.menu-mobile-row-c:hover, .menu-mobile-row-c:active{
+    background-color: var(--web-beige);
+}
+
+.menu-mobile-row-c .menu-span{
+    width: 50%;
+}
+
+.menu-flag{
+    border-radius: 50px;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.menu-flag.greyed{
+    -webkit-filter: grayscale(100%); 
+    filter: grayscale(100%) contrast(50%);
+
+    
+
+    transition: 0.3s;
+}
+
+.menu-flag.greyed:hover{
+    -webkit-filter: grayscale(0%); 
+    filter: grayscale(0%);
+
+    transition: 0.3s;
+}
+
+.hidden-top
+{
+    top: -68% !important;
+}
+
+#webtoon-box{
+    display: grid;
+    width: 100%;
+    justify-content: center;
+}
+
+#webtoon-box img{
+    display: block;
+}

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/main.css" type="text/css">
+    <link rel="stylesheet" href="../styles/gallery.css" type="text/css">
+    <link rel="stylesheet" href="../styles/hong.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.png">
+    <title>Hong - Extras</title>
+</head>
+
+<body>
+    <!-- Begin of navbar-->
+    <header id="navbar">
+        <div id="navbar-top">
+            <div class="menu-logo">
+                <a href="../index.html">
+                    <img class="logo" src="../img/logo2.png"/>
+                </a>
+            </div>
+            <div class="menu-span"></div>
+            <div class="menu">
+                <div class="menu-item" >
+                    <a href="../hong.html">Hong</a>
+                </div>
+                <div class="menu-item hidden" >
+                    <a href="">Futuro</a>
+                </div>
+                <div class="menu-item" >
+                    <a href="../gallery.html">Artworks</a>
+                </div>
+                <div class="menu-item" >
+                    <a href="../about.html">About</a>
+                </div>
+            </div>
+            <div class="menu-span"></div>
+            <div class="menu-logo">
+                <div class="menu-span">
+                </div>
+            </div>
+        </div>
+        <div id="navbar-bot">
+            <div class="submenu">
+                <div class="menu-span" ></div>
+                <div class="menu-item" >
+                    <a href="../hong.html">Plot</a>
+                </div>
+                <div class="menu-item" >
+                    <a href="webtoon.html">Prologue</a>
+                </div>
+                <div class="menu-item" >
+                    <a href="comic.html">Read</a>
+                </div>
+                <div class="menu-item" >
+                    <a href="extras.html">Extras</a>
+                </div>
+                <div class="menu-span" ></div>
+            </div>
+        </div>
+    </header>
+
+    <header id="navbar-mobile">
+        <div class="menu-logo">
+            <a href="../index.html">
+                <img class="logo" src="../img/logo2.png"/>
+            </a>
+        </div>
+        <div class="menu-icon" onclick="toggleMobileMenu()">
+            <img src="../img/menu.png"/>
+        </div>
+    </div>
+    </header>
+
+    <div id="menu-mobile-overlay-bg" class="hidden" onclick="toggleMobileMenu()"></div>
+    <div id="menu-mobile-overlay" class="hidden-top">
+        <!--  -->
+        
+        <div class="menu-mobile-row">
+            Hong
+        </div>
+        <a href="../hong.html">
+            <div class="menu-mobile-row menu-mobile-row-b">
+                Plot
+            </div>
+        </a><a href="./webtoon.html">
+            <div class="menu-mobile-row menu-mobile-row-b">Prologue</div>
+        </a>
+        <a href="./comic.html" class="">
+            <div class="menu-mobile-row menu-mobile-row-b">Read</div>
+        </a>
+        <a href="./extras.html">
+            <div class="menu-mobile-row menu-mobile-row-b">Extras</div>
+        </a>
+        <a href="../gallery.html">
+            <div class="menu-mobile-row">
+                Artworks
+            </div>
+        </a>
+        <a href="../about.html">
+            <div class="menu-mobile-row">
+                About
+            </div>
+        </a>
+    </div>
+
+    <div id="gallery-overlay" class="hidden">
+        <div class="overlay-background" onclick="hideImageOverlay(this);"></div>
+        <div class="gallery-arrow-button" onclick="navigateImages(-1);" style="rotate:-90deg">
+
+        </div>
+        <div class="overlay-image-box">
+            <div id="overlay-image-text">
+                <p id="overlay-text-title" style="font-weight: 350;">
+                </p>
+                <p id="overlay-text-year">
+                    2019
+                </p>
+                <p id="overlay-text-extra">
+                </p>
+            </div>
+            <img id="overlay-image" src="../img/Hong/Extras/pjv1todos.png" />
+        </div>
+        <div class="gallery-arrow-button" onclick="navigateImages(1);" style="rotate:90deg">
+        </div>
+    </div>
+
+    <div id="gallery-overlay-mobile" class="hidden">
+        <div class="overlay-background"  onclick="hideImageOverlay(this);"></div>
+
+        <div class="gallery-arrow-button overlay-close-button" onclick="hideImageOverlay(this);"></div>
+
+        <div id="overlay-image-mobile-div" class="overlay-image-box pinch-zoom">
+            <img id="overlay-image-mobile" src="../img/Hong/Extras/pjv1todos.png" />
+        </div>
+        <div class="overlay-controls-mobile">
+            <div class="gallery-arrow-button" onclick="navigateImages(-1);" style="rotate:-90deg"></div>
+            <div id="overlay-image-text-mobile">
+                <p id="overlay-text-title-mobile" style="font-weight: 350;">
+                </p>
+                <p id="overlay-text-year-mobile">
+                    2019
+                </p>
+                <p id="overlay-text-extra-mobile">
+                </p>
+            </div>
+            <div class="gallery-arrow-button" onclick="navigateImages(1);" style="rotate:90deg"></div>
+        </div>
+    </div>
+
+
+    <!-- Begin of main section-->
+    <div class="main-box">
+        <div class="margin-box">
+            <div id="intro-box">
+                <p>Here you will find additional images from Hong, mostly old or discarded content from the multiple iterations this project has been around.</p>
+            </div>
+            <div id="gallery-filters"></div>
+            <div id="gallery">
+                <img data-year="2023" alt="Discarted web illustration" class="sfw hidden" src="../img/Hong/Extras/Thumbnails/portadawebv.png" />
+                <img data-year="2021" alt="Comic pitch cover" class="sfw hidden" src="../img/Hong/Extras/Thumbnails/portadaold2.png" />
+                <img data-year="2021" alt="Comic pitch 1" class="sfw hidden" src="../img/Hong/Extras/Thumbnails/paginaold4.png" />
+                <img data-year="2021" alt="Comic pitch 2" class="sfw hidden" src="../img/Hong/Extras/Thumbnails/paginaold5.png" />
+                <img data-year="2019" alt="Old character designs" class="sfw hidden" src="../img/Hong/Extras/Thumbnails/pjv1todos.png" />
+                <img data-year="2019" alt="Old comic cover" class="sfw hidden" src="../img/Hong/Extras/Thumbnails/portadaold.png" />
+                <img data-year="2019" alt="Old comic beginning color 1" class="sfw hidden" src="../img/Hong/Extras/Thumbnails/paginaold1.png" />
+                <img data-year="2019" alt="Old comic beginning color 2" class="sfw hidden" src="../img/Hong/Extras/Thumbnails/paginaold2.png" />
+                <img data-year="2019" alt="Old comic beginning color 3" class="sfw hidden" src="../img/Hong/Extras/Thumbnails/paginaold3.png" />
+                <img data-year="2018" alt="Ash first design" class="sfw hidden" src="../img/Hong/Extras/Thumbnails/ashold.png" />
+                <img data-year="2018" alt="Hong first design" class="sfw hidden" src="../img/Hong/Extras/Thumbnails/hongold.png" />
+                <img data-year="2018" alt="Old comic beginning sketch" class="sfw hidden" src="../img/Hong/Extras/Thumbnails/Hongpagev1byn.png" />
+                <img data-year="2018" alt="Inked old comic beginning" class="sfw hidden" src="../img/Hong/Extras/Thumbnails/Hongpagev1.png" />
+            </div>
+            
+        </div>
+    </div>
+
+    <a href="#">
+        <div class="go-up-button hidden"></div>
+    </a>
+
+    <!-- Begin of footer of page -->
+    <footer>
+        <div class="footer-box">
+            <div class="social-logo">
+                <a href="https://bsky.app/profile/turoboto.bsky.social" target="_blank" >
+                    <svg  viewBox="0 0 600 530"><path d="m135.72 44.03c66.496 49.921 138.02 151.14 164.28 205.46 26.262-54.316 97.782-155.54 164.28-205.46 47.98-36.021 125.72-63.892 125.72 24.795 0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.3797-3.6904-10.832-3.7077-7.8964-0.0174-2.9357-1.1937 0.51669-3.7077 7.8964-13.714 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.4491-163.25-81.433-5.9562-21.282-16.111-152.36-16.111-170.07 0-88.687 77.742-60.816 125.72-24.795z"/></svg>
+                </a>
+            </div>
+            <div class="social-logo">
+                <a href="https://twitter.com/turoboto" target="_blank" >
+                    <svg viewBox="0 0 24 24"><path d="M23.643 4.937c-.835.37-1.732.62-2.675.733.962-.576 1.7-1.49 2.048-2.578-.9.534-1.897.922-2.958 1.13-.85-.904-2.06-1.47-3.4-1.47-2.572 0-4.658 2.086-4.658 4.66 0 .364.042.718.12 1.06-3.873-.195-7.304-2.05-9.602-4.868-.4.69-.63 1.49-.63 2.342 0 1.616.823 3.043 2.072 3.878-.764-.025-1.482-.234-2.11-.583v.06c0 2.257 1.605 4.14 3.737 4.568-.392.106-.803.162-1.227.162-.3 0-.593-.028-.877-.082.593 1.85 2.313 3.198 4.352 3.234-1.595 1.25-3.604 1.995-5.786 1.995-.376 0-.747-.022-1.112-.065 2.062 1.323 4.51 2.093 7.14 2.093 8.57 0 13.255-7.098 13.255-13.254 0-.2-.005-.402-.014-.602.91-.658 1.7-1.477 2.323-2.41z"></path></svg>
+                </a>
+            </div>
+            <div class="social-logo">
+                <a href="https://www.webtoons.com/p/community/es/u/_rbby8" target="_blank" >
+                    <svg viewBox="0 0 24 24"><path d="M15.023 15.26c.695 0 1.014-.404 1.014-1.051 0-.551-.308-1.01-.984-1.01-.58 0-.912.404-.912 1.016 0 .543.32 1.045.882 1.045zm-4.888.187c.764 0 1.113-.443 1.113-1.154 0-.604-.338-1.109-1.082-1.109-.637 0-1.002.445-1.002 1.115 0 .597.352 1.148.971 1.148zM24 10.201l-3.15.029.83-9.686L1.958 3.605l1.686 6.248H0l3.734 11.488 8.713-1.283v3.396l10.113-4.641L24 10.201zm-9.104-3.594c0-.049.039-.092.088-.094l1.879-.125.446-.029c.524-.035 1.634.063 1.634 1.236 0 .83-.619 1.184-.619 1.184s.75.189.707 1.092c0 1.602-1.943 1.389-1.943 1.389l-.225-.006-1.908-.053a.089.089 0 0 1-.086-.09l.027-4.504zm-3.675.243c0-.047.039-.09.088-.092l3.064-.203a.08.08 0 0 1 .087.08v.943c0 .049-.039.09-.087.092l-1.9.08a.094.094 0 0 0-.088.09l-.005.394a.083.083 0 0 0 .086.084l1.646-.066a.082.082 0 0 1 .086.084l-.02 1.012a.089.089 0 0 1-.089.086h-1.63a.089.089 0 0 0-.088.088v.416c0 .047.039.088.088.088l1.87.033a.09.09 0 0 1 .087.09v.951a.084.084 0 0 1-.087.084l-3.063-.123a.09.09 0 0 1-.087-.09l.042-4.121zm-6.01.312.975-.064a.101.101 0 0 1 .105.08l.458 2.205c.01.047.027.047.039 0l.576-2.281a.132.132 0 0 1 .108-.09l.921-.061a.108.108 0 0 1 .109.078l.564 2.342c.012.047.029.047.041 0l.6-2.424a.131.131 0 0 1 .108-.092l.996-.064c.048-.004.077.031.065.078l-1.09 4.104a.113.113 0 0 1-.109.082l-1.121-.031a.12.12 0 0 1-.109-.086l-.535-1.965c-.012-.047-.033-.047-.045 0l-.522 1.934a.12.12 0 0 1-.11.082l-1.109-.031a.123.123 0 0 1-.108-.088l-.873-3.618c-.011-.047.019-.088.066-.09zm-.288 9.623v-3.561a.089.089 0 0 0-.087-.088l-1.252-.029a.095.095 0 0 1-.091-.09l-.046-1.125a.082.082 0 0 1 .083-.086l4.047.096c.048 0 .087.041.085.088l-.022 1.088a.093.093 0 0 1-.089.088l-1.139.004a.09.09 0 0 0-.087.088v3.447c0 .049-.039.09-.087.092l-1.227.07a.08.08 0 0 1-.088-.082zm2.834-2.379c0-1.918 1.321-2.482 2.416-2.482s2.339.73 2.339 2.316c0 1.9-1.383 2.482-2.416 2.482-1.033.001-2.339-.724-2.339-2.316zm5.139-.115c0-1.746 1.166-2.238 2.162-2.238s2.129.664 2.129 2.107c0 1.729-1.259 2.26-2.198 2.26s-2.093-.68-2.093-2.129zm7.259 1.711a.175.175 0 0 1-.139-.064l-1.187-1.631c-.029-.039-.053-.031-.053.018v1.67c0 .047-.039.09-.086.092l-1.052.061a.082.082 0 0 1-.087-.082l.039-3.842c0-.047.039-.086.088-.084l.881.02a.2.2 0 0 1 .137.074l1.293 1.902c.027.041.051.033.051-.014l.032-1.846a.087.087 0 0 1 .089-.086l.963.029c.047 0 .085.041.083.09l-.138 3.555a.097.097 0 0 1-.091.092l-.823.046zM16.258 8.23l.724-.014s.47.018.47-.434c0-.357-.411-.33-.411-.33l-.782.008a.09.09 0 0 0-.088.088v.598a.083.083 0 0 0 .087.084zm-.029 1.961h.99c.024 0 .35-.051.35-.404 0-.293-.229-.402-.441-.398l-.898.029a.089.089 0 0 0-.087.09v.596a.086.086 0 0 0 .086.087z"/></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<script src="../js/main.js"></script>
+<script src="../js/gallery.js"></script>
+
+</html>

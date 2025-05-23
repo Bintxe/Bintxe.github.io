@@ -1,0 +1,260 @@
+/*
+#gallery{
+    line-height: 0;       
+    -webkit-column-count: 5;    
+    -webkit-column-gap: 0px;    
+    -moz-column-count: 5;
+    -moz-column-gap: 0px;
+    column-count: 5;    
+    column-gap: 1vw; 
+
+    display:inline-block;    
+    margin-right: auto;    
+    margin-left: auto;  
+}
+
+#gallery img{
+    width: 100% !important;    
+    height: auto !important;  
+    margin-bottom: 1vw;
+    border-radius: 10px;
+    align-self: start;
+
+    transition: 0.25s;
+}
+    */
+
+html{
+    scroll-behavior: smooth;
+}
+
+#gallery
+{
+    position: relative;
+    width: 100%;
+}
+
+#gallery img
+{
+    border-radius: 10px;
+
+    position: absolute;
+    /*
+    width: calc(20vw - 1.25vw);
+    height: auto;*/
+    opacity: 1;
+
+    transition: 0.5s 0.25s ease-in-out, scale 0.25s;
+}
+
+#gallery img.hidden
+{
+    /*width: 0px !important;
+    height: 0px !important;*/
+    top: 0px  !important;
+
+    display: block !important;
+    pointer-events: none;
+    z-index: 0;
+    
+    opacity: 0;
+
+    transition: opacity 0.25s ease-in, top 0.4s ease-in;
+}
+
+/*
+.gallery img:nth-child(3n+1) { order: 1; } 
+.gallery img:nth-child(3n+2) { order: 2; } 
+.gallery img:nth-child(3n) { order: 3; }
+*/
+
+#gallery img:hover{
+    scale: 1.025;
+    transition: 0.25s;
+
+    cursor: pointer;
+}
+
+.go-up-button{
+    background-image: url(../img/flecha2.png);
+    background-size: cover;
+    opacity: 0.5;
+    position: fixed;
+    width: 75px;
+    height: 75px;
+    right: 4vh;
+    bottom: 4vh;
+    transition: 0.2s;
+}
+
+.go-up-button:hover{
+    background-image: url(../img/flecha.png);
+    opacity: 1;
+    transition: 0.2s;
+
+    cursor: pointer;
+}
+
+
+#gallery-overlay{
+    /*background-color: var(--main-overlay-color);*/
+
+    position: fixed;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 4;
+
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;    
+}
+
+#gallery-overlay-mobile
+{
+    position: fixed;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 4;
+
+    display: none;
+}
+
+.overlay-background{
+    background-color: var(--main-overlay-color);
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+.gallery-arrow-button{
+    background-image: url(../img/flecha.png);
+    background-size: cover;
+    opacity: 0.3;
+    width: 100px;
+    height: 100px;
+
+    transition: 0.2s;
+
+}
+
+.gallery-arrow-button:hover{
+    opacity: 1;
+    transition: 0.2s;
+
+    cursor: pointer;
+}
+
+.overlay-image-box{
+    text-align: center;
+    position: relative;
+}
+
+#overlay-image{
+    max-height: 100vh;
+    max-width: calc(100vw - 200px);
+    user-select: none;
+}
+
+#overlay-image-mobile
+{
+    max-height: 85vh;
+    max-width: 100vw;
+    align-self: center;
+
+    z-index: 2;
+}
+
+#overlay-image-text{
+    background-color: var(--main-overlay-color-b);
+    width: 100%;
+    height: 15vh;
+    min-height: 200px;
+    position: absolute;
+    bottom: min(-200px, -15vh);
+    opacity: 0;
+
+    transition: 0.3s ease;
+    pointer-events: none;
+}
+
+#overlay-image-text-mobile{
+    color:var(--main-bg-color);
+
+    font-family: 'Unbounded', Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
+    font-weight: 150;
+    line-height: 1;
+    text-align: center;
+}
+
+#overlay-image-text p{
+    color:var(--main-bg-color);
+    font-family: 'Unbounded', Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.3em;
+    font-weight: 150;
+    line-height: 0.75;
+}
+
+.overlay-controls-mobile{
+    background-color: var(--main-overlay-color);
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+    bottom: 0;
+    z-index: 2;
+    position: absolute;
+}
+
+.overlay-close-button{
+    background-image: url(../img/equis.png);
+    position: absolute;
+    opacity: 0.3 !important;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+}
+
+.overlay-close-button:hover, .overlay-close-button:active{
+    opacity: 1;
+}
+
+/* Mobile screen */
+@media only screen and (max-width: 500px) {
+    .go-up-button{
+        display: none;
+    }
+
+    .gallery-arrow-button{
+        opacity: 1;
+
+        max-height: 65px;
+        max-width: 65px;
+
+        align-self: center;
+    }
+
+    .overlay-background{
+        z-index: 1;
+    }
+
+    #gallery-overlay-mobile{
+        display: inline-flex;
+    }
+
+    .overlay-image-box{
+        display: inline-flex;
+
+        height: 85%;
+        width: 100%;
+
+        justify-content: center;
+    }
+    
+
+    
+}
